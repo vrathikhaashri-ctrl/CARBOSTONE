@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulation | CARBOSTONE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo"><div class="logo-dot"></div> CARBOSTONE</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="process.html">Process</a></li>
+                <li><a href="simulation.html" class="active">Simulation</a></li>
+                <li><a href="prediction.html">Prediction</a></li>
+                <li><a href="digital-twin.html">Digital Twin</a></li>
+                <li><a href="analytics.html">Analytics</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="page-wrapper container">
+        <header class="page-header">
+            <h1 class="page-title">Carbonation Simulation Array</h1>
+            <p class="page-subtitle">Configure environmental parameters to project carbonation behavior in the concrete matrix.</p>
+        </header>
+
+        <div class="sim-layout">
+            <!-- Left: Inputs -->
+            <div class="card">
+                <h3 class="card-title" style="margin-bottom: 2rem;">Parameters</h3>
+                
+                <form id="sim-form">
+                    <div class="param-group">
+                        <label class="param-label">CO₂ Concentration (%) <span class="param-val" id="val-co2">5.0</span></label>
+                        <input type="range" class="research-slider" id="slider-co2" min="0.1" max="20" step="0.1" value="5.0">
+                    </div>
+                    
+                    <div class="param-group">
+                        <label class="param-label">Humidity (RH %) <span class="param-val" id="val-humid">65</span></label>
+                        <input type="range" class="research-slider" id="slider-humid" min="30" max="100" step="1" value="65">
+                    </div>
+
+                    <div class="param-group">
+                        <label class="param-label">Time Exposure (Days) <span class="param-val" id="val-time">365</span></label>
+                        <input type="range" class="research-slider" id="slider-time" min="30" max="3650" step="30" value="365">
+                    </div>
+
+                    <div class="param-group">
+                        <label class="param-label">Porosity (%) <span class="param-val" id="val-pore">15</span></label>
+                        <input type="range" class="research-slider" id="slider-pore" min="5" max="30" step="1" value="15">
+                    </div>
+
+                    <div class="param-group">
+                        <label class="param-label">Temperature (°C) <span class="param-val" id="val-temp">22</span></label>
+                        <input type="range" class="research-slider" id="slider-temp" min="-10" max="60" step="1" value="22">
+                    </div>
+                </form>
+            </div>
+
+            <!-- Right: Visualizer -->
+            <div class="card sim-visual-card">
+                <div class="concrete-block">
+                    <div class="carb-overlay" id="carb-layer"></div>
+                </div>
+                <div class="sim-measurement"><span id="metric-depth">0.00</span> <span>mm</span></div>
+                <p class="text-muted text-sm" style="margin-top: 1rem;">Projected Carbonation Depth</p>
+                <div style="margin-top: 2rem; width: 100%; text-align: center;">
+                    <button class="btn btn-primary" id="btn-run-sim" style="width: 200px;">Run Prediction Query</button>
+                    <p class="text-xs text-muted" style="margin-top:0.5rem;" id="sim-status"></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/simulation.js"></script>
+</body>
+</html>

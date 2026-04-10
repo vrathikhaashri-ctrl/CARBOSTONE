@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Twin | CARBOSTONE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo"><div class="logo-dot"></div> CARBOSTONE</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="process.html">Process</a></li>
+                <li><a href="simulation.html">Simulation</a></li>
+                <li><a href="prediction.html">Prediction</a></li>
+                <li><a href="digital-twin.html" class="active">Digital Twin</a></li>
+                <li><a href="analytics.html">Analytics</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="page-wrapper container">
+        <header class="page-header">
+            <h1 class="page-title">Digital Twin Factory Monitor</h1>
+            <p class="page-subtitle">Live environmental telemetry and parallel prediction modeling</p>
+        </header>
+
+        <div class="twin-grid">
+            <div class="card" style="padding: 0; overflow: hidden;">
+                <div class="livestream-sim" style="background: url('assets/plant.jpg') center/cover; opacity: 0.9;">
+                    <div class="live-indicator"><div class="live-dot"></div> LIVE FEED</div>
+                    <div style="background: rgba(255,255,255,0.9); padding: 1rem; border-radius: 6px; color: var(--text-main);">
+                        <h3 style="margin-bottom: 0;">Chamber Beta-04 Active</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+                <div class="card text-center" style="flex:1; display:flex; flex-direction:column; justify-content:center;">
+                    <div class="text-sm text-muted">Ambient CO₂</div>
+                    <div class="monitor-large" id="dt-co2">-- <span>%</span></div>
+                </div>
+                <div class="card text-center" style="flex:1; display:flex; flex-direction:column; justify-content:center;">
+                    <div class="text-sm text-muted">Internal Temp</div>
+                    <div class="monitor-large" id="dt-temp">-- <span>°C</span></div>
+                </div>
+                <div class="card text-center" style="flex:1; display:flex; flex-direction:column; justify-content:center; background: var(--accent-green-light);">
+                    <div class="text-sm text-green font-bold">Prediction Flow</div>
+                    <div class="monitor-large text-green" id="dt-pred">-- <span>mm/h</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/digital.js"></script>
+</body>
+</html>

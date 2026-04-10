@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics | CARBOSTONE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo"><div class="logo-dot"></div> CARBOSTONE</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="process.html">Process</a></li>
+                <li><a href="simulation.html">Simulation</a></li>
+                <li><a href="prediction.html">Prediction</a></li>
+                <li><a href="digital-twin.html">Digital Twin</a></li>
+                <li><a href="analytics.html" class="active">Analytics</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="page-wrapper container">
+        <header class="page-header">
+            <h1 class="page-title">Sustainability Analytics</h1>
+            <p class="page-subtitle">Macro-level data for carbon reduction and aggregate yield</p>
+        </header>
+
+        <section class="grid-3 mb-4" style="margin-bottom: 2rem;">
+            <div class="card">
+                <div class="text-muted text-sm">CO₂ Sequestered (MT)</div>
+                <div class="text-xl font-bold" style="font-family: var(--font-mono); margin-top: 0.5rem; color: var(--accent-green);">12,450.8</div>
+            </div>
+            <div class="card">
+                <div class="text-muted text-sm">Aggregate Produced (Tons)</div>
+                <div class="text-xl font-bold" style="font-family: var(--font-mono); margin-top: 0.5rem;">45,200.0</div>
+            </div>
+            <div class="card">
+                <div class="text-muted text-sm">Carbon Credits Minted</div>
+                <div class="text-xl font-bold" style="font-family: var(--font-mono); margin-top: 0.5rem; color: var(--accent-green);">12,450</div>
+            </div>
+        </section>
+
+        <section class="card" style="padding: 2rem;">
+            <h3 class="card-title">Monthly CO₂ Capture Capacity</h3>
+            <div class="chart-placeholder" id="monthly-chart">
+                <!-- Javascript will render bars -->
+            </div>
+        </section>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

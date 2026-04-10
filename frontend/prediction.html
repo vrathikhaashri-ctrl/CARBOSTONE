@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction | CARBOSTONE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo"><div class="logo-dot"></div> CARBOSTONE</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="process.html">Process</a></li>
+                <li><a href="simulation.html">Simulation</a></li>
+                <li><a href="prediction.html" class="active">Prediction</a></li>
+                <li><a href="digital-twin.html">Digital Twin</a></li>
+                <li><a href="analytics.html">Analytics</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="page-wrapper container">
+        <header class="page-header" style="text-align: center;">
+            <h1 class="page-title">Prediction Diagnostics</h1>
+            <p class="page-subtitle">Results derived from model endpoint http://127.0.0.1:8000/prediction</p>
+        </header>
+
+        <div class="card prediction-results" style="max-width: 600px; margin: 0 auto;">
+            <h3 class="card-title" style="justify-content: center;">Estimated Carbonation Depth</h3>
+            <div class="pred-value" id="pred-depth">-- <span>mm</span></div>
+            
+            <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem;">
+                <div style="text-align: left; background: var(--bg-page); padding: 1rem; border-radius: 6px; flex: 1;">
+                    <div class="text-sm text-muted">Risk Level</div>
+                    <div class="badge" id="pred-risk" style="margin-top: 0.5rem;">AWAITING</div>
+                </div>
+                <div style="text-align: left; background: var(--bg-page); padding: 1rem; border-radius: 6px; flex: 1;">
+                    <div class="text-sm text-muted">Structural Health</div>
+                    <div class="font-bold" id="pred-health" style="margin-top: 0.5rem;">--</div>
+                </div>
+            </div>
+            
+            <div style="margin-top: 2rem;">
+                <button class="btn btn-outline" onclick="window.location.href='simulation.html'">Recalibrate Parameters</button>
+                <button class="btn btn-primary" id="btn-fetch-latest" style="margin-left: 1rem;">Pull Last Run</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/prediction.js"></script>
+</body>
+</html>
